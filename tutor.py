@@ -22,8 +22,10 @@ def get_completion_from_messages(messages, model = "gpt-3.5-turbo"):
 
 def collect_messages():
     context.append({'role':'user', 'content':f"{prompt}"})
-    response = get_completion_from_messages(context) 
-    return str(response).split(';')
+    response = get_completion_from_messages(context)
+    subject = (response).split(';')
+    subject.append(prompt)
+    return subject
     
 
 context = [ {'role':'system', 'content': """You are an AI tutor designed to assist students in various subjects, limited to 
