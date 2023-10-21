@@ -44,7 +44,7 @@ context1 = [ {'role':'system', 'content': f"""You are an AI tutor designed to as
              """ 
              } ]
 
-prompt = input("Hi, welcome to Tutor AI, what would you like to learn today? \nUser:")
+prompt = input("Any follow up questions? \nUser:")
 while prompt:
     response = collect_messages()
     prompt = input(response + "\nUser:")
